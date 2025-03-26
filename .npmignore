@@ -1,0 +1,9 @@
+/.git
+/.idea
+/src
+/eslint.config.mjs
+/prettier.config.mjs
+/tsconfig.json
+/.gitignore
+/package.json
+/package-lock.json
