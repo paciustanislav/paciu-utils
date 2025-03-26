@@ -1,6 +1,8 @@
 # @paciu/utils
 
-### `npm i @paciu/utils`
+```
+$ npm i @paciu/utils
+```
 
 ### nounForm
 ```javascript
