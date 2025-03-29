@@ -1,4 +1,5 @@
 # @paciu/utils
+[github](https://github.com/paciustanislav/paciu-utils)
 
 ```
 $ npm i @paciu/utils
@@ -44,3 +45,13 @@ secondsToTimeString( 5400, 'hh:mm' ) // 01:30
 ```
 
 
+
+### isArray
+```javascript
+import { isArray } from '@paciu/utils'
+
+isArray( 'array' ) // false
+isArray( [] ) // true
+isArray( [], { minLength: 1 } ) // false
+isArray( [ 'item' ], { minLength: 1 } ) // true
+```
