@@ -4,13 +4,13 @@
 $ npm i @paciu/utils
 ```
 
-### nounForm
+### declination
 ```javascript
-import { nounForm } from '@paciu/utils'
+import { declination } from '@paciu/utils'
 
-nounForm( 1, [ 'час', 'часа', 'часов' ] ) // час
-nounForm( 3, [ 'час', 'часа', 'часов' ] ) // часа
-nounForm( 5, [ 'час', 'часа', 'часов' ] ) // часов
+declination( 1, [ 'час', 'часа', 'часов' ] ) // час
+declination( 3, [ 'час', 'часа', 'часов' ] ) // часа
+declination( 5, [ 'час', 'часа', 'часов' ] ) // часов
 ```
 
 

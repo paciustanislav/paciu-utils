@@ -3,7 +3,7 @@ export const escapeRegExp = ( text: string ) => text.replace( /[-/\\^$*+?.()|[\]
 export const escapeMarkdownV2 = ( text: string ) => text.replace( /[\\_*[\]()~`>#+\-=|{}.!]/g, '\\$&' )
 
 /** */
-export const nounForm = ( number: number, forms: [string, string, string] ) => {
+export const declination = ( number: number, forms: [string, string, string] ) => {
   const cases = [ 2, 0, 1, 1, 1, 2 ]
   return forms[ number % 100 > 4 && number % 100 < 20 ? 2 : cases[ number % 10 < 5 ? number % 10 : 5 ] ]
 }
@@ -38,4 +38,12 @@ export const secondsToTimeString = ( seconds: number, format: string = 'hh:mm:ss
     ss: secondsCount.toString().padStart( 2, '0' ),
   }
   return format.replace( /hh|mm|ss/g, ( match ) => values[ match ] || match )
+}
+
+/** */
+export interface IsArrayOptions {
+  minLength?: number
+}
+export const isArray = ( value: unknown, options?: IsArrayOptions ) => {
+  return Array.isArray( value ) && value.length >= ( options?.minLength || 0 )
 }
